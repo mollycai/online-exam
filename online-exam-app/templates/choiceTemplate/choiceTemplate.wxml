@@ -1,0 +1,26 @@
+<template name="choice">
+  <view class="questionPanel">
+    <!-- form组件 -->
+    <form class="choice-question" bindsubmit="onSubmit">
+      <!-- 题干 -->
+      <view class="choice-stem">
+        <text>{{qid}}. </text>
+        <text class="type">({{utils.getTypeName(type)}})</text>
+        <text>{{stem}}</text>
+      </view>
+      <!-- 选项 -->
+      <view class="options">
+        <radio-group bindchange="radioChange" data-qid="{{qid}}">
+          <label wx:for="{{options}}" wx:key="id">
+            <view class="option">
+              <radio value="{{index}}" checked="{{myAnswer == index}}" disabled="{{disableWrite}}"></radio>
+              <text class="content">{{utils.getNumToLetter(index)}}. {{item}}</text>
+            </view>
+          </label>
+        </radio-group>
+      </view>
+    </form>
+  </view>
+</template>
+
+<wxs src="/utils/util.wxs" module="utils" />

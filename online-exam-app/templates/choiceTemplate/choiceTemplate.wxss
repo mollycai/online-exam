@@ -1,0 +1,34 @@
+.choice-question{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin:  0 40rpx;
+}
+
+.choice-stem{
+  padding: 20rpx 0 ;
+  font-size: 35rpx;
+}
+
+.options{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10rpx 0;
+}
+
+.option{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  padding: 10rpx 0;
+}
+
+.content{
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+
+.submit{
+  padding: 30rpx 0;
+}

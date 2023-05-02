@@ -1,0 +1,26 @@
+<template name="multChoice">
+  <view class="questionPanel">
+    <!-- form组件 -->
+    <form class="multChoice-question" bindsubmit="onMultChoiceSubmit">
+      <!-- 题干 -->
+      <view class="multChoice-stem">
+        <text>{{qid}}. </text>
+        <text class="type">({{utils.getTypeName(type)}})</text>
+        <text>{{stem}}</text>
+      </view>
+      <!-- 选项 -->
+      <view class="multoptions">
+        <checkbox-group bindchange="checkboxChange" data-qid="{{qid}}">
+          <label wx:for="{{options}}" wx:key="id">
+            <view class="multoption">
+              <checkbox value="{{index}}" checked="{{utils.getInclude(myAnswer,index)}}" disabled="{{disableWrite}}"></checkbox>
+              <text class="multcontent">{{utils.getNumToLetter(index)}}. {{item}}</text>
+            </view>
+          </label>
+        </checkbox-group>
+      </view>
+    </form>
+  </view>
+</template>
+
+<wxs src="/utils/util.wxs" module="utils" />

@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/myIndex/myIndex",
+    "pages/exam/exam",
+    "pages/my/my"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "Online Exam",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true
+  },
+  "tabBar":{
+    "selectedColor": "#07C160",
+    "list":[{
+      "pagePath": "pages/myIndex/myIndex",
+      "iconPath": "image/exam.png",
+      "selectedIconPath": "image/exam-select.png",
+      "text": "题库"
+    },{
+      "pagePath": "pages/my/my",
+      "iconPath": "image/my.png",
+      "selectedIconPath": "image/my-select.png",
+      "text": "我的记录"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

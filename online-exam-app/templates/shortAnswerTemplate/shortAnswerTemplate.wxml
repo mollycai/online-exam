@@ -1,0 +1,18 @@
+<template name="shortAnswer">
+  <view class="questionPanel">
+    <!-- form组件 -->
+    <form class="shortAnswer-question" bindsubmit="onshortAnswerSubmit">
+      <!-- 题干 -->
+      <view class="shortAnswer-stem">
+        <text>{{qid}}. </text>
+        <text class="type">({{utils.getTypeName(type)}})</text>
+        <text>{{stem}}</text>
+      </view>
+      <view class="answer-area">
+        <textarea placeholder="请在此答题，200字以内" name="textarea" maxlength="200" bindinput="textareaChange" data-qid="{{qid}}" value="{{myAnswer}}" disabled="{{disableWrite}}"/>
+      </view>
+    </form>
+  </view>
+</template>
+
+<wxs src="/utils/util.wxs" module="utils" />

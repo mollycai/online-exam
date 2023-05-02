@@ -1,0 +1,30 @@
+.multChoice-question {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 40rpx;
+}
+
+.multChoice-stem {
+  padding: 20rpx 0;
+  font-size: 35rpx;
+}
+
+.multoptions{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10rpx 0;
+}
+
+.multoption{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  padding: 10rpx 0;
+}
+
+.multcontent{
+  font-size: 30rpx;
+  line-height: 50rpx;
+}

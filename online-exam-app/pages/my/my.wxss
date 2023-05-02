@@ -1,0 +1,81 @@
+/* pages/my/my.wxss */
+.my-page {
+  height: 100vh;
+}
+
+.title-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50rpx 0 10rpx;
+  font-size: 35rpx;
+  font-weight: 800;
+}
+
+.table-outer-box {
+  display: flex;
+  flex-direction: column;
+  padding: 50rpx 50rpx 0;
+  flex: 1;
+}
+
+.table {
+  height: 80rpx;
+  color: #fff;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #5f677a;
+  text-align: center;
+}
+
+.table-top {
+  border-top: 1rpx solid #5f677a;
+}
+
+.table-flex {
+  display: flex;
+}
+
+.table-theme {
+  font-size: 28rpx;
+}
+
+.table-item {
+  font-size: 24rpx;
+  opacity: 0.6;
+}
+
+.item {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #000000;
+}
+
+.scroll-view {
+  flex: 1;
+}
+
+.item-id,.item-lid,.item-time,.item-rate{
+  color: #000000;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.item-id{
+  flex: 1;
+}
+.item-lid{
+  flex: 3;
+}
+.item-time{
+  flex: 3;
+}
+.item-rate{
+  flex: 1.5;
+}
+
+.null{
+  text-align: center;
+  margin-top: 50rpx;
+  color: #aaaaaa;
+}

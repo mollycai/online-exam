@@ -1,0 +1,59 @@
+var utils = {
+  getTypeName: function (type) {
+    var map = {
+      'choice': '单选题',
+      'multChoice': '多选题',
+      'fill': '填空题',
+      'shortAnswer': '简答题'
+    }
+    return map[type]
+  },
+  getNumToLetter: function (id) {
+    var letterMap = {
+      '0': 'A',
+      '1': 'B',
+      '2': 'C',
+      '3': 'D',
+      '4': 'E',
+      '5': 'F'
+    }
+    if (typeof id === 'object') {
+      var list = []
+      for (var i = 0; i < id.length; i++) {
+        list.push(letterMap[id[i] + ''])
+      }
+      return list
+    }
+    return letterMap[id + '']
+  },
+  getInclude: function (myAnswer, index) {
+    for (var i = 0; i < myAnswer.length; i++) {
+      if (myAnswer[i] == index) return true
+    }
+    return false
+  },
+  checkAnswer: function (question) {
+    if (question.type === 'choice') {
+      return question.myAnswer == question.answer
+    } else if (question.type === 'multChoice' || question.type === 'fill') {
+      if (question.type === 'multChoice') question.myAnswer.sort(function (a, b) {
+        return a - b
+      })
+      if (question.myAnswer.length) {
+        for (var i = 0; i < question.myAnswer.length; i++) {
+          if (question.myAnswer[i] != question.answer[i] || question.myAnswer.length == 0) return false
+        }
+        return true
+      } else {
+        return false
+      }
+    }
+  },
+}
+
+module.exports = {
+  getTypeName: utils.getTypeName,
+  getNumToLetter: utils.getNumToLetter,
+  getInclude: utils.getInclude,
+  checkAnswer: utils.checkAnswer
+}

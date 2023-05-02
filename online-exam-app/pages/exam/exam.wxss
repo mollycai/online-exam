@@ -1,0 +1,98 @@
+/* pages/exam/exam.wxss */
+@import "/templates/choiceTemplate/choiceTemplate.wxss";
+@import "/templates/fillTemplate/fillTemplate.wxss";
+@import "/templates/multChoiceTemplate/multChoiceTemplate.wxss";
+@import "/templates/shortAnswerTemplate/shortAnswerTemplate.wxss";
+
+.nav-panel {
+  height: 60rpx;
+  width: 100%;
+  border-bottom: #cccccc 1px solid;
+  padding: 15rpx 0;
+}
+
+.scroll-panel {
+  margin: 0 auto;
+  width: 90%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.index-box {
+  display: inline-block;
+  background-color: #dddddd;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.index-box-select{
+  background-color: #cccccc;
+}
+
+.index-box-finish{
+  background-color: #67c23a;
+  color: #ffffff;
+}
+
+.index-box-wrong{
+  background-color: #f56c6c;
+  color: #ffffff;
+}
+
+.exam-page {
+  height: 100vh;
+}
+
+.type {
+  font-size: 30rpx;
+  line-height: 35rpx;
+  color: gray;
+  margin-right: 5rpx;
+}
+
+.btn-panel {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.button-box {
+  display: flex;
+  padding: 40rpx 40rpx;
+  justify-content: space-between;
+  flex-direction: row;
+  flex: 1 2 1;
+  align-items: center;
+}
+
+.btn {
+  width: 250rpx !important;
+}
+
+.reference{
+  margin-top: 30rpx;
+  padding: 30rpx 40rpx;
+}
+
+.right-answer,.my-answer{
+  padding: 30rpx;
+  background-color: #eeeeee;
+  border-radius: 20rpx;
+}
+.my-answer{
+  margin-top: 30rpx;
+}
+
+.my-answer-wrong{
+  background-color: #fde2e2;
+}
+.my-answer-right{
+  background-color: #e1f3d8;
+}
+.my-answer-refer{
+  background-color: #d9ecff;
+}

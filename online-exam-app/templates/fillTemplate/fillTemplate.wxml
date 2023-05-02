@@ -1,0 +1,20 @@
+<template name="fill">
+  <view class="questionPanel">
+    <!-- form组件 -->
+    <form class="fill-question" bindsubmit="onFillSubmit">
+      <!-- 题干 -->
+      <text class="line">{{qid}}. </text>
+      <text class="type">({{utils.getTypeName(type)}})</text>
+      <view class="fill-stem">
+        <block wx:for="{{stem}}" wx:key="item" wx:for-index="idx" class="fill-stem-item">
+          <text class="item-text line">{{item}}</text>
+          <view class="fill-input-box" wx:if="{{idx !== stem.length - 1}}">
+            <input class="fill-input" name="input" bindinput="inputChange" data-info="{{idx}}" data-qid="{{qid}}" value="{{myAnswer[idx]}}"  disabled="{{disableWrite}}"/>
+          </view>
+        </block>
+      </view>
+    </form>
+  </view>
+</template>
+
+<wxs src="/utils/util.wxs" module="utils" />

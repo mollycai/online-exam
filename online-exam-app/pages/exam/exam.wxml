@@ -1,0 +1,36 @@
+<!--pages/exam/exam.wxml-->
+<import src="/templates/choiceTemplate/choiceTemplate" />
+<import src="/templates/fillTemplate/fillTemplate" />
+<import src="/templates/multChoiceTemplate/multChoiceTemplate" />
+<import src="/templates/shortAnswerTemplate/shortAnswerTemplate" />
+
+<view class="exam-page">
+  <view class="nav-panel">
+    <scroll-view class="scroll-panel" scroll-x="{{true}}">
+      <view class="index-box {{index === idx ? 'index-box-select':''}} {{questions[idx].myAnswer != null && questions[idx].myAnswer.length != 0 ? 'index-box-finish':''}} {{!utils.checkAnswer(questions[idx]) && showAnswer ? 'index-box-wrong':''}}" wx:for="{{questions}}" wx:for-index="idx" wx:key="idx" bindtap="indexChange" data-idx="{{idx}}">
+        {{item.qid}}
+      </view>
+    </scroll-view>
+  </view>
+  <template is="{{questions[index].type}}" data="{{...questions[index],disableWrite}}" />
+  <view class="reference" wx:if="{{showAnswer}}">
+    <view class="right-answer {{utils.checkAnswer(questions[index]) ? 'my-answer-right':'my-answer-wrong'}} {{questions[index].type === 'shortAnswer' ?'my-answer-refer' :''}}">
+      {{questions[index].type === 'shortAnswer' ? '参考答案' : '正确答案'}}：{{questions[index].type === 'choice' || questions[index].type === 'multChoice' ? utils.getNumToLetter(questions[index].answer) : questions[index].answer}}
+    </view>
+  </view>
+  <view class="btn-panel">
+    <view class="button-box">
+      <view class="btn-pre">
+        <button size="mini" bindtap="preQuestion"> 上一题 </button>
+      </view>
+      <view class="btn-box">
+        <button type="primary" class="btn" wx:if="{{index === questions.length - 1 && showAnswer === false}}" bindtap="allSubmit"> 提交 </button>
+      </view>
+      <view class="btn-next">
+        <button size="mini" bindtap="nextQuestion"> 下一题 </button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<wxs src="/utils/util.wxs" module="utils" />

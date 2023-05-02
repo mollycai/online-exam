@@ -1,0 +1,17 @@
+<!--pages/myIndex/myIndex.wxml-->
+<view class="index-page">
+  <view class="pic-panel">
+    <image src="../../image/logo.png" class="image"/>
+  </view>
+  <view class="picker-panel">
+    <view class="section__title">题库</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{examList}}">
+      <view class="picker">
+        {{examList[index]}}
+      </view>
+    </picker>
+  </view>
+  <view class="btn-panel">
+    <button type="primary" bindtap="goExam">开始答题</button>
+  </view>
+</view>

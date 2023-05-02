@@ -1,0 +1,37 @@
+/* pages/myIndex/myIndex.wxss */
+.index-page {
+  height: 100vh;
+  background-color: #fafafa;
+}
+.pic-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100rpx 0 10rpx;
+}
+.image{
+  width: 480rpx;
+  height: 480rpx;
+}
+
+.picker-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.section__title{
+  font-size: 35rpx;
+  font-weight: 500;
+}
+
+.picker{
+  background-color: #fff;
+  width: 100vw;
+  padding: 20rpx 100rpx;
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: 700;
+  margin: 30rpx 0 100rpx;
+}

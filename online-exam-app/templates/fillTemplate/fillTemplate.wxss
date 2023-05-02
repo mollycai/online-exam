@@ -1,0 +1,33 @@
+.fill-question {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 40rpx;
+}
+
+.fill-stem {
+  padding: 20rpx 0;
+  font-size: 35rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.fill-stem-item{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fill-input-box {
+  border-bottom: 1px black solid;
+  max-width: 250rpx;
+  min-width: 50rpx;
+  height: 50rpx;
+  padding: 5rpx 10rpx;
+  margin: 5rpx;
+}
+
+.line{
+  line-height: 50rpx;
+  padding: 10rpx 0;
+}

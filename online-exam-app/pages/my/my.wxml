@@ -1,0 +1,25 @@
+<!--pages/my/my.wxml-->
+<view class="my-page">
+  <view class="title-panel">
+    答题记录
+  </view>
+  <view class="table-outer-box">
+    <view class="table table-theme table-flex table-top">
+        <view class="item-id item">{{themeArr.id}}</view>
+        <view class="item-lid item">{{themeArr.lid}}</view>
+        <view class="item-time item">{{themeArr.time}}</view>
+        <view class="item-rate item">{{themeArr.rate}}</view>
+    </view>
+    <view class="null" wx:if="{{itemArr.length == 0}}">
+      无记录
+    </view>
+    <scroll-view class="scroll-view flex-column" scroll-y="true" bindscrolltolower="loadMore">
+      <view class="table table-item table-flex" wx:for="{{itemArr}}" wx:key="index">
+        <view class="item-id">{{item.id}}</view>
+        <view class="item-lid">{{examList[item.lid-1]}}</view>
+        <view class="item-time">{{item.time}}</view>
+        <view class="item-rate">{{item.rate}}</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
