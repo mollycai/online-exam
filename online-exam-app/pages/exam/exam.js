@@ -77,7 +77,7 @@ Page({
         if (this.data.questions[i].type === 'multChoice') this.data.questions[i].myAnswer.sort(function (a, b) {
           return a - b
         })
-        if (this.data.questions[i].myAnswer.length) {
+        if (this.data.questions[i].myAnswer.length == this.data.questions[i].answer.length) {
           let flag = true
           for (let j = 0; j < this.data.questions[i].myAnswer.length; j++) {
             if (this.data.questions[i].myAnswer[j] != this.data.questions[i].answer[j] || this.data.questions[i].myAnswer.length == 0) flag = false
