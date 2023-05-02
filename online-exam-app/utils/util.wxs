@@ -39,7 +39,7 @@ var utils = {
       if (question.type === 'multChoice') question.myAnswer.sort(function (a, b) {
         return a - b
       })
-      if (question.myAnswer.length) {
+      if (question.myAnswer.length == question.answer.length) {
         for (var i = 0; i < question.myAnswer.length; i++) {
           if (question.myAnswer[i] != question.answer[i] || question.myAnswer.length == 0) return false
         }
