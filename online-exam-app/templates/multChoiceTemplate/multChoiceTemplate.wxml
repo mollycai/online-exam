@@ -12,7 +12,7 @@
       <view class="multoptions">
         <checkbox-group bindchange="checkboxChange" data-qid="{{qid}}">
           <label wx:for="{{options}}" wx:key="id">
-            <view class="multoption">
+            <view class="multoption {{utils.getInclude(myAnswer,index) ? 'multoption_active':''}}">
               <checkbox value="{{index}}" checked="{{utils.getInclude(myAnswer,index)}}" disabled="{{disableWrite}}"></checkbox>
               <text class="multcontent">{{utils.getNumToLetter(index)}}. {{item}}</text>
             </view>

@@ -12,7 +12,7 @@
       <view class="options">
         <radio-group bindchange="radioChange" data-qid="{{qid}}">
           <label wx:for="{{options}}" wx:key="id">
-            <view class="option">
+            <view class="option {{myAnswer == index ? 'option_active':''}}">
               <radio value="{{index}}" checked="{{myAnswer == index}}" disabled="{{disableWrite}}"></radio>
               <text class="content">{{utils.getNumToLetter(index)}}. {{item}}</text>
             </view>

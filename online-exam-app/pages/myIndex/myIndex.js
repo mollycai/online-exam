@@ -8,16 +8,19 @@ Page({
     examList: [],
     index: 0
   },
+  // 绑定选择器
   bindPickerChange(e) {
     this.setData({
       index: e.detail.value
     })
   },
+  // 进入测试
   goExam() {
     wx.navigateTo({
       url: `/pages/exam/exam?exam=${this.data.index}`,
     })
   },
+  // 请求题库列表
   reqLab(){
     wx.request({
       url: 'http://localhost:2000/lab',

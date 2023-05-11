@@ -1,4 +1,5 @@
 var utils = {
+  // 获取题目类型名称
   getTypeName: function (type) {
     var map = {
       'choice': '单选题',
@@ -8,6 +9,7 @@ var utils = {
     }
     return map[type]
   },
+  // 数字转字母
   getNumToLetter: function (id) {
     var letterMap = {
       '0': 'A',
@@ -26,12 +28,14 @@ var utils = {
     }
     return letterMap[id + '']
   },
+  // 判断答案数组中是否包含目标答案
   getInclude: function (myAnswer, index) {
     for (var i = 0; i < myAnswer.length; i++) {
       if (myAnswer[i] == index) return true
     }
     return false
   },
+  // 校对答案
   checkAnswer: function (question) {
     if (question.type === 'choice') {
       return question.myAnswer == question.answer

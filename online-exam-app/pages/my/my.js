@@ -14,6 +14,7 @@ Page({
     itemArr: [],
     examList: [],
   },
+  // 请求答题记录
   reqRecord(){
     wx.request({
       url: 'http://localhost:2000/getRecord',
@@ -25,6 +26,7 @@ Page({
       }
     })
   },
+  // 请求题库列表
   reqLab(){
     wx.request({
       url: 'http://localhost:2000/lab',

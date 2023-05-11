@@ -22,6 +22,14 @@
   flex-direction: row;
   justify-content: left;
   padding: 10rpx 0;
+  background-color: #eeeeee;
+  padding: 20rpx;
+  margin-top: 25rpx;
+  border-radius: 20rpx;
+}
+
+.multoption_active{
+  background-color: #e1f3d8;
 }
 
 .multcontent{

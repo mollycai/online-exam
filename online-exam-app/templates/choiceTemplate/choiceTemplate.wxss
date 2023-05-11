@@ -8,6 +8,7 @@
 .choice-stem{
   padding: 20rpx 0 ;
   font-size: 35rpx;
+  font-weight: 600;
 }
 
 .options{
@@ -22,6 +23,14 @@
   flex-direction: row;
   justify-content: left;
   padding: 10rpx 0;
+  background-color: #eeeeee;
+  padding: 20rpx;
+  margin-top: 25rpx;
+  border-radius: 20rpx;
+}
+
+.option_active{
+  background-color: #e1f3d8;
 }
 
 .content{
