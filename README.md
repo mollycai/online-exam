@@ -5,7 +5,7 @@
 ## 选择题库进行答题：
 ![image](https://user-images.githubusercontent.com/99068236/235629228-c4cc7fe5-c772-40ad-8e0d-2fdca44915b7.png)
 ## 答题界面：
-![image](https://user-images.githubusercontent.com/99068236/235629333-efb5bdd9-ef42-4a9a-a156-c4d1d54079ba.png)
+![image](https://github.com/EdwinTsaiiiii/online-exam/assets/99068236/56790e8d-b34e-4d6c-a06b-341c50856e0a)
 ## 判断正确率：
 ![image](https://user-images.githubusercontent.com/99068236/235629560-2582f12c-9a71-43c4-a9e4-17f193f0d47e.png)
 ## 完成后显示参考答案：
